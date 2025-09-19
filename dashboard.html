@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <!-- main bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+        <!-- story set -->
+         <a href="https://storyset.com/work">Work illustrations by Storyset</a>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./assets/css/dashboard.css">
+</head>
+
+<body style="background-color: #e0f2f1;">
+
+    <div class="container-fluid ">
+        <div class="row">
+            <!-- Sidebar -->
+            <!-- Sidebar -->
+            <div class="col-md-1 col-lg-1 d-flex flex-column align-items-center py-3 " style="background-color: #009688;">
+            </div>
+
+
+            <!-- Main content -->
+            <main class="col-md-11 ms-md-auto ms-sm-auto col-lg-11 px-md-4 mt-2">
+
+                <!-- Top Bar -->
+                <div class=" d-flex justify-content-between align-items-center">
+                    <!-- Left: Back link -->
+                    <a href="#" class="text-decoration-none ">&larr; Back to HomePage</a>
+                    <!-- Right-Doctor Profile -->
+                    <div
+                        class="d-flex align-items-center p-1 pe-2 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-pill">
+                        <img src="./assets/images/medical doctor-3.jpg" alt="Doctor Profile" class="rounded-circle me-2"
+                            style="width: 30px; height: 30px; object-fit: cover;">
+                        <span>Dr.Alex Hess </span>
+
+                    </div>
+
+                </div>
+                <!-- first row -->
+                <div class="card mb-3 mt-3 shadow-sm rounded-4">
+                    <div class="row g-0 align-items-center">
+
+                        <!-- Text Section -->
+                        <div class="col-md-8 p-4">
+                            <h3 class="card-title fw-bold">Hello, Margret</h3>
+                            <p class="card-text text-muted">Have a nice day and don't forget to take care of your
+                                health!</p>
+                            <p class="card-text">
+                                <a href="#" class="text-primary fw-semibold text-decoration-none">
+                                    Read More &gt;
+                                </a>
+                            </p>
+
+                        </div>
+
+                        <!-- Image Section -->
+                        <div class="col-md-4 text-end pe-4">
+                            <img src="./assets/images/Medicine-cuate.png" class="img-fluid" style="max-width: 180px;"
+                                alt="Illustration">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- 2nd row -->
+                <div class="row my-4">
+                    <!-- Heart Rate -->
+                    <div class="col-sm-3 col-md-12 col-lg-mb-3">
+                        <div class="card shadow-sm border-0 rounded-4 h-100 text-center hover-card">
+                            <div class="card-body">
+                                <img src="./assets/images/heart-svg-removebg-preview.png" style="width: 50px;" alt="">
+                                <h3 class="mt-2 text-danger">102 bpm</h3>
+                                <h5 class="card-title">Heart Rate</h5>
+                                <p class="card-text text-muted">Normal resting heart rate for adults is 60–100 bpm.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Temperature -->
+                    <div class="col-sm-3 col-md-12 col-lg-3 mb-3">
+                        <div class="card shadow-sm border-0 rounded-4 h-100 text-center hover-card">
+                            <div class="card-body">
+                                <img src="./assets/images/afe99cf8ad59ab2dd6abd04bbc28dfd3-removebg-preview.png"
+                                    style="width: 50px;" alt="">
+                                <h3 class="mt-2 text-warning">36.8 &#8451;</h3>
+                                <h5 class="card-title">Temperature</h5>
+                                <p class="card-text text-muted">Normal human body temperature is around 36.5–37.5℃.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blood Pressure -->
+                    <div class="col-sm-3 col-md-12 col-lg-3 mb-3">
+                        <div class="card shadow-sm border-0 rounded-4 h-100 text-center hover-card">
+                            <div class="card-body">
+                                <img src="./assets/images/drop_of_blood-removebg-preview.png" style="width: 50px;"
+                                    alt="">
+                                <h3 class="mt-2 text-primary">120/80</h3>
+                                <h5 class="card-title">Blood Pressure</h5>
+                                <p class="card-text text-muted">Ideal blood pressure is 120/80 mmHg for most adults.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Glucose -->
+                    <div class="col-sm-3  col-md-12 col-lg-3 mb-3">
+                        <div class="card shadow-sm border-0 rounded-4 h-100 text-center hover-card">
+                            <div class="card-body">
+                                <img src="./assets/images/glucometer-removebg-preview.png" style="width: 50px;" alt="">
+                                <h3 class="mt-2 text-success">107 mg/dl</h3>
+                                <h5 class="card-title">Glucose</h5>
+                                <p class="card-text text-muted">Normal fasting glucose is 70–100 mg/dl.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- 3rd row -->
+                <div class="row">
+                    <!-- Left Side: Prescriptions + Appointments -->
+                    <div class="col-12 col-lg-6">
+
+                        <!-- Prescriptions Section -->
+                        <div class="card p-3 mb-4">
+                            <h5 class="fs-4">Prescriptions</h5>
+                            <button type="button" class="btn btn-outline-secondary mb-3">
+                                + Add Prescription
+                            </button>
+                            <ul class="list-group">
+                                <li class="list-group-item" style="background-color: #009688; color: #fff;">
+                                    Medicine A — 2x daily
+                                </li>
+                                <li class="list-group-item">Medicine B — before meals</li>
+                            </ul>
+                        </div>
+
+                        <!-- Appointments Section -->
+                        <div class="card p-3 mb-4">
+                            <h5 class="fs-4">Appointments</h5>
+                            <ul class="list-group">
+                                <li class="list-group-item" style="background-color: #009688; color: #fff;">
+                                    Dr. Smith — 20th Feb 2025
+                                </li>
+                                <li class="list-group-item">Dr. Lee — 5th Mar 2025</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Side: Test Reports -->
+                    <div class="col-12 col-lg-6">
+                        <div class="card p-3">
+                            <h5 class="fs-4 mb-3">Test Reports</h5>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="card p-3">
+                                        <h6 class="mb-1">CT Scan - Full Body</h6>
+                                        <p class="mb-0 text-muted">12th February 2020</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card p-3">
+                                        <h6 class="mb-1">Blood Test</h6>
+                                        <p class="mb-0 text-muted">12th February 2020</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card p-3">
+                                        <h6 class="mb-1">Eye Test</h6>
+                                        <p class="mb-0 text-muted">12th February 2020</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </main>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
