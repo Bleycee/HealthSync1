@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthSync - Pregnancy Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <style>
+        /* Custom styles specific to pregnancy dashboard */
+        .card-vital-sign {
+            background-color: #ffffff;
+            border-left: 5px solid;
+            min-height: 120px;
+        }
+
+        /* Vital Signs Color Palette */
+        .card-vital-sign.heart-rate {
+            border-color: #ec407a;
+        }
+        /* Pink/Mauve for Fetal Health/Actions */
+        .bg-pink-light {
+            background-color: #ffebee;
+        }
+        .text-mauve {
+            color: #ec407a;
+        }
+        .btn-outline-mauve {
+            color: #ec407a;
+            border-color: #ec407a;
+        }
+        .btn-outline-mauve:hover {
+            background-color: #ec407a;
+            color: white;
+        }
+    </style>
+</head>
+
+<body style="background-color: #e0f2f1;" class="container-fluid">
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-2 col-lg-1 d-flex flex-column align-items-center py-4 vh-100 position-fixed"
+                style="background-color: #009688;">
+                <div class="mb-5">
+                    <img src="./assets/images/Healthsync logo .png" alt="HealthSync Logo" class="img-fluid"
+                        style="max-height: 35px; filter: brightness(0) invert(1);">
+                </div>
+
+                <a href="#" class="sidebar-icon-link mb-4 text-white opacity-75 active" title="View Dashboard Home"
+                    id="nav-dashboard">
+                    <i class="bi bi-speedometer fs-4"></i>
+                </a>
+                <a href="#" class="sidebar-icon-link mb-4 text-white opacity-75" title="Manage Appointments"
+                    id="nav-appointments">
+                    <i class="bi bi-calendar-check fs-4"></i>
+                </a>
+                <a href="#" class="sidebar-icon-link mb-4 text-white opacity-75" title="View Prescriptions"
+                    id="nav-prescriptions">
+                    <i class="bi bi-file-text fs-4"></i>
+                </a>
+                <a href="#" class="sidebar-icon-link mb-4 text-white opacity-75" title="Review Health Metrics"
+                    id="nav-metrics">
+                    <i class="bi bi-graph-up fs-4"></i>
+                </a>
+                <a href="#" class="sidebar-icon-link mt-auto mb-4 text-white opacity-75" title="Settings and Profile"
+                    id="nav-settings">
+                    <i class="bi bi-gear fs-4"></i>
+                </a>
+                <a href="login.html" class="sidebar-icon-link text-white opacity-75 logout-link"
+                    title="Sign Out of HealthSync"
+                    onclick="return confirm('Are you sure you want to sign out? This will log you out of your dashboard.')">
+                    <i class="bi bi-box-arrow-right fs-4"></i>
+                </a>
+            </div>
+
+
+            <main class="col-md-10 ms-md-auto col-lg-11 ms-lg-auto px-md-4 mt-2">
+
+                <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-3">
+                    <a href="#" class="text-decoration-none text-secondary fs-6">&larr; Back to HomePage</a>
+
+                    <div class="d-flex align-items-center">
+                        <div class="dropdown me-3">
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false" id="language-dropdown"
+                                style="border-color: #009688; color: #009688;">
+                                <i class="bi bi-globe me-1"></i> <span id="current-language">EN</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="language-dropdown">
+                                <li><a class="dropdown-item" href="#" data-lang="EN">English (EN)</a></li>
+                                <li><a class="dropdown-item" href="#" data-lang="HA">Hausa (HA)</a></li>
+                                <li><a class="dropdown-item" href="#" data-lang="IB">Igbo (IB)</a></li>
+                                <li><a class="dropdown-item" href="#" data-lang="YO">Yoruba (YO)</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="d-flex align-items-center p-1 pe-2 bg-light rounded-pill border shadow-sm">
+                            <img src="./assets/images/medical doctor-3.jpg" alt="Doctor Profile"
+                                class="rounded-circle me-2" style="width: 30px; height: 30px; object-fit: cover;">
+                            <span class="fw-semibold">Dr. Alex Hess </span>
+                            <i class="bi bi-caret-down-fill ms-2 text-muted"></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card mb-4 shadow-sm rounded-4 border-0" style="background-color: #f0fdfa;">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-md-8 p-4">
+                            <h3 class="card-title fw-bolder mb-1" style="color: #009688;"
+                                data-translate-key="greeting-header">Hello, Hope</h3>
+                            <p class="card-text text-muted mb-3" data-translate-key="sub-greeting">Wishing you a healthy
+                                journey! You are in week 28.</p>
+                            <p class="card-text">
+                                <a href="#" class="text-primary fw-semibold text-decoration-none small"
+                                    data-translate-key="wellness-tips">
+                                    View Prenatal Tips &gt;
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-md-4 text-end pe-4 d-none d-md-block">
+                            <img src="./assets/images/pregnant_woman_illustration.png" class="img-fluid"
+                                style="max-width: 180px;" alt="Illustration of a pregnant woman">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row my-4">
+                    <h4 class="mb-3 ps-3 fw-bold" data-translate-key="metrics-title">Vital Metrics</h4>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-12 col-sm-6 col-lg-3 mb-3">
+                        <div class="card p-3 shadow-sm rounded-4 card-vital-sign heart-rate">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-heart-fill fs-5 me-2 text-mauve"></i>
+                                <span class="fw-semibold text-muted" data-translate-key="heart-rate-title">Heart
+                                    Rate</span>
+                            </div>
+                            <h5 class="fw-bold fs-3 text-mauve" data-translate-key="heart-rate-value">82 bpm</h5>
+                            <small class="text-muted">Normal range</small>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 mb-3">
+                        <div class="card p-3 shadow-sm rounded-4 card-vital-sign temperature">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-thermometer-high fs-5 me-2 text-info"></i>
+                                <span class="fw-semibold text-muted" data-translate-key="temperature-title">Temperature</span>
+                            </div>
+                            <h5 class="fw-bold fs-3 text-info" data-translate-key="temperature-value">37.0 °C</h5>
+                            <small class="text-muted">Last check: 10 min ago</small>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 mb-3">
+                        <div class="card p-3 shadow-sm rounded-4 card-vital-sign blood-pressure">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-hand-index-thumb-fill fs-5 me-2 text-purple"></i>
+                                <span class="fw-semibold text-muted" data-translate-key="blood-pressure-title">Blood Pressure</span>
+                            </div>
+                            <h5 class="fw-bold fs-3 text-purple" data-translate-key="blood-pressure-value">120/80</h5>
+                            <small class="text-muted">Ideal range</small>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3 mb-3">
+                        <div class="card p-3 shadow-sm rounded-4 card-vital-sign glucose">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-droplet-half fs-5 me-2 text-warning"></i>
+                                <span class="fw-semibold text-muted" data-translate-key="glucose-title">Glucose</span>
+                            </div>
+                            <h5 class="fw-bold fs-3 text-warning" data-translate-key="glucose-value">90 mg/dL</h5>
+                            <small class="text-muted">Before meal</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-lg-6 mb-4">
+                        <div class="card p-4 border-0 shadow-sm rounded-4 bg-pink-light">
+                            <h5 class="fs-4 fw-bold d-flex align-items-center text-mauve"
+                                data-translate-key="fetal-movement-title">
+                                <i class="bi bi-heart-pulse me-2"></i> Fetal Movement
+                            </h5>
+                            <h1 class="display-3 fw-bold text-center my-3 text-mauve">15 <span class="fs-5 text-muted"
+                                    data-translate-key="fetal-movement-kicks">kicks today</span></h1>
+                            <p class="text-center text-muted small">Target: 10 movements in 2 hours.</p>
+                            <button type="button" class="btn btn-outline-mauve w-100 mt-2"
+                                data-translate-key="log-kick-btn">
+                                <i class="bi bi-plus-lg me-1"></i> Log Kick
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 mb-4">
+                        <div class="card p-4 border-0 shadow-sm rounded-4" style="background-color: #e0f7fa;">
+                            <h5 class="fs-4 fw-bold d-flex align-items-center text-info" data-translate-key="weight-gain-title">
+                                <i class="bi bi-graph-up me-2"></i> Weight Gain
+                            </h5>
+                            <h1 class="display-3 fw-bold text-center my-3 text-info" data-translate-key="weight-gain-value">+3 <span
+                                    class="fs-5 text-muted" data-translate-key="weight-unit">kg total</span></h1>
+                            <p class="mb-2 text-muted text-center">Tracking from 55 kg to 68 kg.</p>
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-bold text-success">Optimal Progress</span>
+                                <span class="small text-muted">Last Log: Today</span>
+                            </div>
+                            <button type="button" class="btn btn-outline-info w-100 mt-2"
+                                data-translate-key="log-weight-btn">
+                                <i class="bi bi-plus-lg me-1"></i> Log Weight
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+
+                    <div class="col-12 col-lg-6 mb-4">
+                        <div class="card p-4 border-0 shadow-sm rounded-4" style="background-color: #f1f8e9;">
+                            <h5 class="fs-4 fw-bold mb-3 text-success" data-translate-key="bio-data-title">Baby & Pregnancy Status</h5>
+                            <ul class="list-group list-group-flush small">
+                                <li class="list-group-item d-flex justify-content-between align-items-center bg-light">
+                                    <span class="fw-semibold" data-translate-key="edd-label">Estimated Due Date (EDD)</span>
+                                    <span class="fw-bold text-success" data-translate-key="edd-date">Feb 14, 2026</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <span class="fw-semibold" data-translate-key="child-sex-label">Child's Sex</span>
+                                    <span class="text-mauve" data-translate-key="child-sex-value">Male</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center bg-light">
+                                    <span class="fw-semibold" data-translate-key="amniotic-fluid-label">Amniotic Fluid</span>
+                                    <span class="text-info" data-translate-key="amniotic-fluid-status">Normal</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <span class="fw-semibold" data-translate-key="mother-danger-label">Mother Status</span>
+                                    <span class="fw-bold text-success" data-translate-key="mother-danger-status">Stable</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6 mb-4">
+                        <div class="card p-4 border-0 shadow-sm rounded-4">
+                            <h5 class="fs-4 fw-bold mb-3" data-translate-key="antenatal-title">Antenatal Schedule</h5>
+
+                            <div class="mb-3 p-2 border rounded-3 text-center">
+                                <p class="fw-bold text-muted mb-1">November 2025</p>
+                                <div class="d-flex justify-content-around small fw-bold mb-1">
+                                    <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                                </div>
+                                <div class="d-flex justify-content-around small">
+                                    <span class="p-1"></span><span class="p-1"></span><span class="p-1"></span><span class="p-1"></span><span class="p-1">1</span><span class="p-1">2</span><span class="p-1">3</span>
+                                </div>
+                                <div class="d-flex justify-content-around small">
+                                    <span class="p-1">4</span><span class="p-1">5</span><span class="p-1">6</span><span class="p-1">7</span><span class="p-1">8</span><span class="p-1">9</span><span class="p-1">10</span>
+                                </div>
+                                <div class="d-flex justify-content-around small">
+                                    <span class="p-1">11</span><span class="p-1">12</span><span class="p-1">13</span><span class="p-1">14</span>
+                                    <span class="p-1 rounded-circle text-white bg-primary fw-bold"
+                                        style="width: 25px; height: 25px; display: flex; justify-content: center; align-items: center;">15</span>
+                                    <span class="p-1">16</span><span class="p-1">17</span>
+                                </div>
+                            </div>
+
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center bg-light fw-semibold">
+                                    <span data-translate-key="appt-routine-scan">Routine Scan</span>
+                                    <span class="text-primary">Nov 15th, 10:00 AM</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <span data-translate-key="appt-nutrition-check">Nutrition Check</span>
+                                    <span class="text-muted">Nov 22nd, 2:00 PM</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-4 justify-content-center">
+                    <div class="col-12 col-lg-6 mb-4">
+                        <div class="card p-4 border-0 shadow-sm rounded-4 bg-pink-light">
+                            <h5 class="fs-4 fw-bold text-danger" data-translate-key="emergency-title">Emergency Contacts</h5>
+                            <ul class="list-group list-group-flush border-top">
+                                <li class="list-group-item d-flex justify-content-between align-items-center py-2 bg-pink-light">
+                                    <div>
+                                        <span class="fw-semibold">Caregiver (Aisha)</span> <br>
+                                        <small class="text-muted">+234 801 234 5678</small>
+                                    </div>
+                                    <a href="tel:+2348012345678" class="btn btn-danger btn-sm rounded-pill px-3"
+                                        data-translate-key="call-btn">
+                                        <i class="bi bi-telephone-fill"></i> CALL
+                                    </a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center py-2 bg-pink-light">
+                                    <div>
+                                        <span class="fw-semibold">Dr. Alex Hess</span> <br>
+                                        <small class="text-muted">+234 809 876 5432</small>
+                                    </div>
+                                    <a href="tel:+2348098765432" class="btn btn-outline-danger btn-sm rounded-pill px-3"
+                                        data-translate-key="office-btn">
+                                        <i class="bi bi-telephone"></i> Office
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="./assets/js/dashboard.js"></script>
+</body>
+
+</html>

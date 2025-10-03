@@ -1,10 +1,38 @@
+/* Custom Styles for Dashboard Components */
+
+/* --- Sidebar Styles --- */
+
+/* Base transition for smoother effects */
+.sidebar-icon-link {
+    transition: opacity 0.2s, padding 0.3s, border-left 0.3s, transform 0.2s; /* Added transform */
+    width: 100%;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.sidebar-icon-link:hover {
+    opacity: 1 !important;
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover background */
+    transform: translateX(2px); /* Subtle movement to indicate interaction */
+}
+
+/* CSS to indicate the currently active page */
+.sidebar-icon-link.active {
+    opacity: 1 !important;
+    border-left: 4px solid white; 
+    padding-left: 10px; 
+}
+
+
+/* --- Card Hover Styles (Retained) --- */
 
 .hover-card {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
 .hover-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important; 
+    cursor: pointer; 
 }
-
-
