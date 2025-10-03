@@ -5,185 +5,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <!-- bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <!-- main bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="./assets/css/dashboard.css">
+    <link rel="stylesheet" href="./assets/css/styles.css"> 
 </head>
 
-<body style="background-color: #e0f2f1;">
+<body style="background-color: #e0f2f1; " class="container-fluid">
 
-    <div class="container-fluid ">
+    <div class="container-fluid">
         <div class="row">
-            <!-- Sidebar -->
-            <!-- Sidebar -->
-            <div class="col-md-1 col-lg-1 d-flex flex-column align-items-center py-3 " style="background-color: #009688;">
+            
+            <div class="col-md-2 col-lg-1 d-flex flex-column align-items-center py-4 vh-100 position-fixed" style="background-color: #009688;">
+                 
+                 <div class="mb-5">
+                    <img src="uploaded:Healthsync logo -bb20fe09-54b6-4cd1-9624-6e21256a73c6" alt="HealthSync Logo" class="img-fluid"
+                         style="max-height: 35px; filter: brightness(0) invert(1);">
+                 </div>
+
+                 <a href="#" class="sidebar-icon-link mb-4 text-white opacity-75" title="View Dashboard Home" id="nav-dashboard">
+                    <i class="bi bi-speedometer fs-4"></i>
+                 </a>
+                 <a href="#" class="sidebar-icon-link mb-4 text-white opacity-75" title="Manage Appointments" id="nav-appointments">
+                    <i class="bi bi-calendar-check fs-4"></i>
+                 </a>
+                 <a href="#" class="sidebar-icon-link mb-4 text-white opacity-75" title="View Prescriptions" id="nav-prescriptions">
+                    <i class="bi bi-file-text fs-4"></i>
+                 </a>
+                 <a href="#" class="sidebar-icon-link mb-4 text-white opacity-75" title="Review Health Metrics" id="nav-metrics">
+                    <i class="bi bi-graph-up fs-4"></i>
+                 </a>
+                 <a href="#" class="sidebar-icon-link mt-auto mb-4 text-white opacity-75" title="Settings and Profile" id="nav-settings">
+                    <i class="bi bi-gear fs-4"></i>
+                 </a>
+                 <a href="login.html" 
+                    class="sidebar-icon-link text-white opacity-75 logout-link" 
+                    title="Sign Out of HealthSync"
+                    onclick="return confirm('Are you sure you want to sign out? This will log you out of your dashboard.')">
+                    <i class="bi bi-box-arrow-right fs-4"></i>
+                 </a>
             </div>
 
 
-            <!-- Main content -->
-            <main class="col-md-11 ms-md-auto ms-sm-auto col-lg-11 px-md-4 mt-2">
+            <main class="col-md-10 ms-md-auto col-lg-11 ms-lg-auto px-md-4 mt-2">
 
-                <!-- Top Bar -->
-                <div class=" d-flex justify-content-between align-items-center">
-                    <!-- Left: Back link -->
-                    <a href="#" class="text-decoration-none ">&larr; Back to HomePage</a>
-                    <!-- Right-Doctor Profile -->
-                    <div
-                        class="d-flex align-items-center p-1 pe-2 text-danger-emphasis bg-danger-subtle border border-danger-subtle rounded-pill">
-                        <img src="./assets/images/medical doctor-3.jpg" alt="Doctor Profile" class="rounded-circle me-2"
-                            style="width: 30px; height: 30px; object-fit: cover;">
-                        <span>Dr.Alex Hess </span>
+                <div class="d-flex justify-content-between align-items-center border-bottom pb-2 mb-3">
+                    <a href="#" class="text-decoration-none text-secondary fs-6">&larr; Back to HomePage</a>
+                    
+                    <div class="d-flex align-items-center">
 
+                        <div class="dropdown me-3">
+                            <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="language-dropdown" style="border-color: #009688; color: #009688;">
+                                <i class="bi bi-globe me-1"></i> <span id="current-language">EN</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="language-dropdown">
+                                <li><a class="dropdown-item" href="#" data-lang="EN">English (EN)</a></li>
+                                <li><a class="dropdown-item" href="#" data-lang="HA">Hausa (HA)</a></li>
+                                <li><a class="dropdown-item" href="#" data-lang="IB">Igbo (IB)</a></li>
+                                <li><a class="dropdown-item" href="#" data-lang="YO">Yoruba (YO)</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="d-flex align-items-center p-1 pe-2 bg-light rounded-pill border shadow-sm">
+                            <img src="./assets/images/medical doctor-3.jpg" alt="Doctor Profile" class="rounded-circle me-2"
+                                style="width: 30px; height: 30px; object-fit: cover;">
+                            <span class="fw-semibold">Dr. Alex Hess </span>
+                            <i class="bi bi-caret-down-fill ms-2 text-muted"></i>
+                        </div>
                     </div>
-
                 </div>
-                <!-- first row -->
-                <div class="card mb-3 mt-3 shadow-sm rounded-4">
+                
+                <div class="card mb-4 shadow-sm rounded-4 border-0" style="background-color: #f0fdfa;">
                     <div class="row g-0 align-items-center">
 
-                        <!-- Text Section -->
                         <div class="col-md-8 p-4">
-                            <h3 class="card-title fw-bold">Hello, Margret</h3>
-                            <p class="card-text text-muted">Have a nice day and don't forget to take care of your
-                                health!</p>
+                            <h3 class="card-title fw-bolder mb-1" style="color: #009688;" data-translate-key="greeting-header">Hello, Margret</h3>
+                            <p class="card-text text-muted mb-3" data-translate-key="sub-greeting">Have a nice day and don't forget to take care of your health!</p>
                             <p class="card-text">
-                                <a href="#" class="text-primary fw-semibold text-decoration-none">
-                                    Read More &gt;
+                                <a href="#" class="text-primary fw-semibold text-decoration-none small">
+                                    View Wellness Tips &gt;
                                 </a>
                             </p>
 
                         </div>
 
-                        <!-- Image Section -->
-                        <div class="col-md-4 text-end pe-4">
+                        <div class="col-md-4 text-end pe-4 d-none d-md-block">
                             <img src="./assets/images/Medicine-cuate.png" class="img-fluid" style="max-width: 180px;"
-                                alt="Illustration">
+                                alt="Illustration of medicine and health">
                         </div>
                     </div>
                 </div>
 
 
-
-                <!-- 2nd row -->
                 <div class="row my-4">
-                    <!-- Heart Rate -->
-                    <div class="col-sm-3 col-md-12 col-lg-3 mb-3">
-                        <div class="card shadow-sm border-0 rounded-4 h-100 text-center hover-card">
-                            <div class="card-body">
-                                <img src="./assets/images/heart-svg-removebg-preview.png" style="width: 50px;" alt="">
-                                <h3 class="mt-2 text-danger">102 bpm</h3>
-                                <h5 class="card-title">Heart Rate</h5>
-                                <p class="card-text text-muted">Normal resting heart rate for adults is 60–100 bpm.</p>
-                            </div>
-                        </div>
+                    <h4 class="mb-3 ps-3 fw-bold" data-translate-key="metrics-title">Health Metrics</h4>
                     </div>
 
-                    <!-- Temperature -->
-                    <div class="col-sm-3 col-md-12 col-lg-3 mb-3">
-                        <div class="card shadow-sm border-0 rounded-4 h-100 text-center hover-card">
-                            <div class="card-body">
-                                <img src="./assets/images/afe99cf8ad59ab2dd6abd04bbc28dfd3-removebg-preview.png"
-                                    style="width: 50px;" alt="">
-                                <h3 class="mt-2 text-warning">36.8 &#8451;</h3>
-                                <h5 class="card-title">Temperature</h5>
-                                <p class="card-text text-muted">Normal human body temperature is around 36.5–37.5℃.</p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Blood Pressure -->
-                    <div class="col-sm-3 col-md-12 col-lg-3 mb-3">
-                        <div class="card shadow-sm border-0 rounded-4 h-100 text-center hover-card">
-                            <div class="card-body">
-                                <img src="./assets/images/drop_of_blood-removebg-preview.png" style="width: 50px;"
-                                    alt="">
-                                <h3 class="mt-2 text-primary">120/80</h3>
-                                <h5 class="card-title">Blood Pressure</h5>
-                                <p class="card-text text-muted">Ideal blood pressure is 120/80 mmHg for most adults.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Glucose -->
-                    <div class="col-sm-3  col-md-12 col-lg-3 mb-3">
-                        <div class="card shadow-sm border-0 rounded-4 h-100 text-center hover-card">
-                            <div class="card-body">
-                                <img src="./assets/images/glucometer-removebg-preview.png" style="width: 50px;" alt="">
-                                <h3 class="mt-2 text-success">107 mg/dl</h3>
-                                <h5 class="card-title">Glucose</h5>
-                                <p class="card-text text-muted">Normal fasting glucose is 70–100 mg/dl.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- 3rd row -->
                 <div class="row">
-                    <!-- Left Side: Prescriptions + Appointments -->
                     <div class="col-12 col-lg-6">
 
-                        <!-- Prescriptions Section -->
-                        <div class="card p-3 mb-4">
-                            <h5 class="fs-4">Prescriptions</h5>
-                            <button type="button" class="btn btn-outline-secondary mb-3">
-                                + Add Prescription
+                        <div class="card p-3 mb-4 border-0 shadow-sm rounded-4">
+                            <h5 class="fs-4 fw-bold" data-translate-key="prescriptions-title">Prescriptions</h5>
+                            <button type="button" class="btn btn-outline-secondary mb-3 w-100" style="color: #009688; border-color: #009688;" data-translate-key="add-prescription-btn">
+                                <i class="bi bi-plus-lg me-1"></i> Add Prescription
                             </button>
-                            <ul class="list-group">
-                                <li class="list-group-item" style="background-color: #009688; color: #fff;">
-                                    Medicine A — 2x daily
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #009688; color: #fff; border-radius: .375rem .375rem 0 0;">
+                                    <span>Medicine A — 2x daily</span>
+                                    <i class="bi bi-capsule text-white"></i>
                                 </li>
-                                <li class="list-group-item">Medicine B — before meals</li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <span>Medicine B — before meals</span>
+                                    <i class="bi bi-capsule text-muted"></i>
+                                </li>
                             </ul>
                         </div>
 
-                        <!-- Appointments Section -->
-                        <div class="card p-3 mb-4">
-                            <h5 class="fs-4">Appointments</h5>
-                            <ul class="list-group">
-                                <li class="list-group-item" style="background-color: #009688; color: #fff;">
-                                    Dr. Smith — 20th Feb 2025
+                        <div class="card p-3 mb-4 border-0 shadow-sm rounded-4" style="background-color: #fce4ec;"> 
+                            <h5 class="fs-4 fw-bold text-danger" data-translate-key="emergency-title">Emergency Contacts</h5>
+                            <ul class="list-group list-group-flush border-top">
+                                <li class="list-group-item d-flex justify-content-between align-items-center py-2" style="background-color: #fce4ec;">
+                                    <div>
+                                        <span class="fw-semibold">Caregiver (Aisha)</span> <br>
+                                        <small class="text-muted">+234 801 234 5678</small>
+                                    </div>
+                                    <a href="tel:+2348012345678" class="btn btn-danger btn-sm rounded-pill px-3" data-translate-key="call-btn">
+                                        <i class="bi bi-telephone-fill"></i> CALL
+                                    </a>
                                 </li>
-                                <li class="list-group-item">Dr. Lee — 5th Mar 2025</li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center py-2" style="background-color: #fce4ec;">
+                                    <div>
+                                        <span class="fw-semibold">Dr. Alex Hess</span> <br>
+                                        <small class="text-muted">+234 809 876 5432</small>
+                                    </div>
+                                    <a href="tel:+2348098765432" class="btn btn-outline-danger btn-sm rounded-pill px-3" data-translate-key="office-btn">
+                                        <i class="bi bi-telephone"></i> Office
+                                    </a>
+                                </li>
                             </ul>
                         </div>
 
                     </div>
 
-                    <!-- Right Side: Test Reports -->
                     <div class="col-12 col-lg-6">
-                        <div class="card p-3">
-                            <h5 class="fs-4 mb-3">Test Reports</h5>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <div class="card p-3">
-                                        <h6 class="mb-1">CT Scan - Full Body</h6>
-                                        <p class="mb-0 text-muted">12th February 2020</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <div class="card p-3">
-                                        <h6 class="mb-1">Blood Test</h6>
-                                        <p class="mb-0 text-muted">12th February 2020</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <div class="card p-3">
-                                        <h6 class="mb-1">Eye Test</h6>
-                                        <p class="mb-0 text-muted">12th February 2020</p>
-                                    </div>
-                                </div>
+                        
+                        <div class="card p-3 mb-4 border-0 shadow-sm rounded-4">
+                            <h5 class="fs-4 fw-bold d-flex align-items-center" data-translate-key="steps-title">
+                                <i class="bi bi-shoe-fill me-2 text-primary"></i> Daily Steps
+                            </h5>
+                            <p class="mb-2 text-muted">Goal: 3,000 Steps</p>
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="fw-bold text-success">2,100 Steps</span>
+                                <span class="small text-muted">70% Complete</span>
                             </div>
+                            <div class="progress" role="progressbar" aria-label="Steps Progress" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar" style="width: 70%; background-color: #009688;"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="card p-3 border-0 shadow-sm rounded-4">
+                            <h5 class="fs-4 fw-bold mb-3" data-translate-key="reports-title">Test Reports</h5>
+                            <div class="row">
+                                </div>
                         </div>
                     </div>
                 </div>
-
-
             </main>
         </div>
     </div>
@@ -192,6 +181,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+    <script src="./assets/JS/dashboard.js"></script>
 </body>
 
 </html>

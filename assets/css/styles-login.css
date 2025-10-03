@@ -1,0 +1,60 @@
+/* Define a custom primary color to easily use brand color across components */
+:root {
+    --hs-teal: #009688;
+    --hs-light: #e0f2f1;
+}
+
+/* Page Background Color */
+body {
+    background-color: var(--hs-light);
+}
+
+/* Brand Button Styles */
+.btn-brand {
+    background-color: var(--hs-teal);
+    border-color: var(--hs-teal);
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-brand:hover {
+    background-color: #00796b; /* Slightly darker shade for hover */
+    border-color: #00796b;
+    color: #fff;
+}
+
+/* Style for the modern switch */
+.form-check-input:checked {
+    background-color: var(--hs-teal);
+    border-color: var(--hs-teal);
+}
+
+/* Styling the Role Radio Buttons (Buttons) */
+.role-radio-group .form-check {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.role-radio-group .form-check-input {
+    display: none; /* Hide standard radio button */
+}
+
+.role-radio-group .form-check-label {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.role-radio-group .form-check-input:checked + .form-check-label {
+    background-color: var(--hs-teal);
+    color: white;
+    border-color: var(--hs-teal);
+    box-shadow: 0 0 5px rgba(0, 150, 136, 0.5);
+}
+
+/* Style for the Forgot Password/Sign Up link color */
+a.text-decoration-none[style*="var(--hs-teal)"] {
+    color: var(--hs-teal) !important;
+}
