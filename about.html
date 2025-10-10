@@ -1,40 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About Us - HealthSync</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+   <style>
+        /* --- CSS FIX FOR TEAM CARD TEXT CONTRAST ---
+    This ensures text inside the white cards is dark for readability.
+*/
+        #Team .card h5,
+        #Team .card p.card-text {
+            /* Use a strong dark gray for the name and body text */
+            color: #333 !important;
+        }
+
+        /* Styles the name (h5) to be a strong color */
+        #Team .card h5 {
+            font-weight: 700;
+            /* Using a dark color for emphasis */
+            color: #00796b !important;
+        }
+
+        /* Styles the job title (p.small) with a standard muted gray */
+        #Team .card p.small {
+            color: #6c757d !important;
+            font-size: 0.9em;
+        }
+
+        /* Ensures team member photos maintain consistent sizing */
+        .team-img-fixed {
+            height: 300px;
+            object-fit: cover;
+            object-position: top;
+        }
+    </style>
 </head>
 
-<body class="container-fluid" style="background-color: #e0f2f1;">
-    <header class="my-5"></header>
+<body>
 
-    <section id="special" class="my-5 py-5 bg-light">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="landingpage.html">
+                    <img src="./assets/images/Healthsync logo .png" alt="Your Company Logo" style="height: 60px;"
+                        class="me-2 mx-5 px-5">
+
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+                    aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="main-nav">
+
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./landingpage.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./about.html">About Us</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./services.html">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./faqs.html">FAQs</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <a class="btn btn-primary d-none d-lg-block mx-5" href="./login.html">
+                    Get Started
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="mission" class="my-5 py-5 " style="background-color: #125250; color: blue;">
+        <div class="container text-center">
+            <h1 class="display-5 fw-bold text-brand-teal mb-3">Our Story: Bridging Care and Technology</h1>
+            <div class="col-lg-8 mx-auto">
+
+                <p class="lead text-white mb-4 ">
+                    HealthSync was founded on the belief that managing health shouldn't be complicated or isolating. We
+                    recognized a significant gap
+                    between the great care providers offer and the accessible tools available to patients and their
+                    support networks.
+                </p>
+
+                <p class="lead text-white mb-4">
+                    Our mission is to **bridge that gap** by building smart, accessible technology that empowers
+                    patients,
+                    simplifies health tracking, and fosters a strong, connected support system. We envision a future
+                    where
+                    everyone feels supported, informed, and truly in control of their health journey.
+                </p>
+
+            </div>
+            <img src="./assets/images/Online Doctor-amico (4).png"
+                alt="Illustration of person using a digital health service"
+                class="img-fluid rounded-4 shadow-lg border border-light hero-image mx-auto d-block" width="50%">
+        </div>
+    </section>
+
+    <section id="special" class="my-5 py-5">
         <div class="container">
             <div class="row featurette align-items-center g-5">
 
-                <!-- Text Content -->
                 <div class="col-md-7">
                     <h2 class="featurette-heading fw-bold lh-sm mb-4 text-dark">
-                        What Makes <span class="text-primary">Us Special</span>
+                        Our Core Philosophy
                     </h2>
 
                     <div class="mb-4">
-                        <h4 class="fw-semibold text-secondary">Patient-Centered Care</h4>
+                        <h4 class="fw-semibold text-dark">Patient-Centered Care</h4>
                         <p class="lead text-muted">
-                            We believe healthcare should revolve around <strong>you</strong>. Our approach is focused on
-                            your unique needs, preferences, and goals. From the moment you connect with us, our team
-                            listens,
-                            supports, and partners with you—making your journey to better health <em>personalized,
-                                compassionate, and effective</em>.
+                            We believe healthcare should revolve around **you**. Our approach is focused on your unique
+                            needs,
+                            preferences, and goals. From the moment you connect with us, our team listens, supports, and
+                            partners with you—making your journey to better health *personalized, compassionate, and
+                            effective*.
                         </p>
                     </div>
 
                     <div class="mb-4">
-                        <h4 class="fw-semibold text-secondary">Easy Health Tracking & Monitoring</h4>
+                        <h4 class="fw-semibold text-dark">Connected Monitoring</h4>
                         <p class="lead text-muted">
                             Stay in control of your health effortlessly. Our app makes it simple to track your progress,
                             while loved ones and care providers can monitor alongside you—ensuring support,
@@ -43,136 +146,105 @@
                     </div>
 
                     <div>
-                        <h4 class="fw-semibold text-secondary">Secure & Private</h4>
+                        <h4 class="fw-semibold text-dark">Secure & Private by Design</h4>
                         <p class="lead text-muted">
-                            Your health information is always protected. We use top-level security and strict privacy
-                            standards, so you can manage your health with confidence knowing your data is safe.
+                            Your health information is always protected. We use **top-level security** and strict
+                            privacy
+                            standards, so you can manage your health with confidence knowing your data is safe and
+                            confidential.
                         </p>
                     </div>
                 </div>
 
-                <!-- Image Content -->
                 <div class="col-md-5 text-center">
-                    <img src="./assets/images/medical doctor-3.jpg" alt="Caring medical professional with patient"
-                        class="img-fluid rounded-4 shadow-lg border border-light" width="100%" height="400"
-                        style="object-fit: cover;">
+                    <img src="./assets/images/Public health-pana.png"
+                        alt="Illustration of public health or collaborative care"
+                        class="img-fluid rounded-4 shadow-lg border border-light image-auto-height" width="100%">
                 </div>
             </div>
         </div>
     </section>
 
-
-    <section id="medify" class="my-5 py-5 bg-light">
-        <div class="container" style="background-color: #009688; color: white;">
-            <div class="row featurette align-items-center">
-                <!-- Text Content -->
-                <div class="col-md-7 order-md-2">
-                    <h2 class="featurette-heading fw-bold lh-1 mb-4 text-primary">
-                        Why Choose Us
-                    </h2>
-                    <p class="lead text-muted">
-                        Health Tracking Made Easy: Managing your health has never been simpler.
-                        With our app, you can effortlessly track your progress, monitor vital
-                        information, and stay on top of your wellness goals. What’s more, your
-                        loved ones and care providers can follow along—offering support, guidance,
-                        and encouragement to keep you motivated every step of the way.
-                    </p>
-                </div>
-
-                <!-- Image Content -->
-                <div class="col-md-5 order-md-1 text-center">
-                    <img src="./assets/images/group-2.jpg" alt="HealthSync App Preview"
-                        class="img-fluid rounded shadow-lg" width="500" height="500" style="object-fit: cover;">
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="Team" class="my-5 py-5 bg-light">
+    <section id="Team" class="my-5 py-5 " style="background-color: #125250">
         <div class="container">
-            <h2 class="text-center fw-bold mb-5 text-primary">Meet Our Team</h2>
+            <h2 class="text-center fw-bold mb-5 text-white">Meet Our Team</h2>
 
             <div class="row row-cols-1 row-cols-md-3 g-4">
-
-                <!-- Team Member 1 -->
                 <div class="col">
                     <div class="card h-100 shadow-sm border-0 rounded-3">
-                        <img src="./assets/images/KayC.jfif" class="card-img-top rounded-top" alt="Kalechi Kalu">
+                        <img src="./assets/images/KayC.jfif" class="card-img-top rounded-top team-img-fixed"
+                            alt="Kelechi Kalu">
                         <div class="card-body text-center">
-                            <h5 class="card-title fw-bold text-dark">Kalechi Kalu</h5>
-                            <p class="card-text text-muted">
-                                Senior Developer and Co-Founder of HealthSync, passionate about building
-                                innovative solutions that bridge technology and healthcare.
-                                Experienced in leading projects, driving growth, and creating impactful products.
+                            <h5 class="card-title fw-bold">Kelechi Kalu</h5>
+                            <p class="card-text text-muted small fw-semibold text-uppercase">Frontend Developer</p>
+                            <p class="card-text">
+                                Passionate about building innovative solutions that bridge technology and healthcare.
+                                Kelechi leads our engineering efforts to deliver secure and scalable health platforms.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Team Member 2 -->
                 <div class="col">
                     <div class="card h-100 shadow-sm border-0 rounded-3">
-                        <img src="./assets/images/meg.jpg" class="card-img-top rounded-top" alt="Ajay Ayoropo Margret">
+                        <img src="./assets/images/meg.jpg" class="card-img-top rounded-top team-img-fixed"
+                            alt="Ajay Ayoropo Margret">
                         <div class="card-body text-center">
-                            <h5 class="card-title fw-bold text-dark">Ajay Ayoropo Margret</h5>
-                            <p class="card-text text-muted">
-                                Co-Founder of HealthSyn and seasoned Senior Developer dedicated to
-                                transforming healthcare through technology. Skilled in guiding teams,
-                                delivering scalable solutions, and shaping digital innovations that
-                                make a real impact.
+                            <h5 class="card-title fw-bold">Ajayi Ayoropo Margret</h5>
+                            <p class="card-text text-muted small fw-semibold text-uppercase">Frontend Developer</p>
+                            <p class="card-text">
+                                Dedicated to transforming patient experience through user-focused design. Ajay guides
+                                our
+                                product strategy, ensuring impact and accessibility are always the priority.
                             </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Team Member 3 -->
                 <div class="col">
                     <div class="card h-100 shadow-sm border-0 rounded-3">
-                        <img src="./assets/images/KayC.jfif" class="card-img-top rounded-top" alt="Team Member">
+                        <img src="./assets/images/laurel peculiar.jpg" class="card-img-top rounded-top team-img-fixed"
+                            alt="Laurel Peculiar">
                         <div class="card-body text-center">
-                            <h5 class="card-title fw-bold text-dark">Team Member</h5>
-                            <p class="card-text text-muted">
-                                A dedicated professional focused on delivering excellence and
-                                supporting HealthSync’s mission of reshaping healthcare
-                                through innovation and care.
+                            <h5 class="card-title fw-bold">Laurel Peculiar</h5>
+                            <p class="card-text text-muted small fw-semibold text-uppercase">Frontend Developer</p>
+                            <p class="card-text">
+                                Laurel translates complex technical requirements into smooth, intuitive user interfaces,
+                                focusing on a seamless and positive patient experience across all devices.
                             </p>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
 
-
-    <section id="app" class="bg-light">
+    <section id="cta" class="py-5">
         <div class="container col-xxl-8 px-4 py-5">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
 
-                <!-- Image Section -->
                 <div class="col-10 col-sm-8 col-lg-6 text-center">
-                    <img src="./assets/images/group.jpg" class="d-block mx-lg-auto img-fluid rounded shadow-lg"
-                        alt="HealthSync Team" width="700" height="500" loading="lazy">
+                    <img src="./assets/images/Online Doctor-rafiki.png"
+                        class="d-block mx-lg-auto img-fluid rounded shadow-lg image-auto-height"
+                        alt="Illustration of a person engaging with a virtual doctor or health service" width="700"
+                        loading="lazy">
                 </div>
 
-                <!-- Text Section -->
                 <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold text-primary mb-3">HealthSync</h1>
+                    <h1 class="display-4 fw-bold text-dark mb-3">See Our Capabilities</h1>
                     <p class="lead text-muted">
-                        Bridging the gap between healthcare users and hospitals with smart,
-                        patient-centered solutions. Track your health, manage medications,
-                        and stay connected to care providers—all in one app.
+                        We're dedicated to our mission, but the real magic is in the features. Ready to see how
+                        HealthSync
+                        works? Explore our detailed services and discover the power of connected care.
                     </p>
 
-                    <!-- Buttons -->
                     <div class="d-grid gap-3 d-md-flex justify-content-md-start mt-4">
-                        <button type="button" class="btn btn-primary btn-lg px-4 shadow-sm">
-                            Get Started
-                        </button>
-                        <button type="button" class="btn btn-outline-secondary btn-lg px-4">
-                            Learn More
+                        <a href="./services.html" class="btn btn-brand-primary btn-lg px-4 shadow-sm">
+                            Explore Services
+                        </a>
+                        <button type="button" class="btn btn-outline-dark btn-lg px-4">
+                            Contact Us
                         </button>
                     </div>
                 </div>
@@ -180,12 +252,37 @@
         </div>
     </section>
 
+    <footer class="footer mt-auto py-4 bg-dark text-white">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h6 class="text-uppercase fw-bold mb-3 text-brand-primary">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="landingpage.html" class="text-white text-decoration-none small">Home</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none small">Our Services</a></li>
+                        <li><a href="#" class="text-white text-decoration-none small">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white text-decoration-none small">Terms of Use</a></li>
+                    </ul>
+                </div>
 
+                <div class="col-md-4 mb-3">
+                    <h6 class="text-uppercase fw-bold mb-3 text-brand-primary">Contact Us</h6>
+                    <p class="small mb-1"><i class="bi bi-geo-alt-fill me-2"></i> Lagos, Nigeria</p>
+                    <p class="small mb-1"><i class="bi bi-envelope-fill me-2"></i> support@healthsync.ng</p>
+                    <p class="small mb-1"><i class="bi bi-phone-fill me-2"></i> +234 800 123 4567</p>
+                </div>
 
-
-
-
-
+                <div class="col-md-4 mb-3">
+                    <h6 class="text-uppercase fw-bold mb-3 text-brand-primary">Follow Us</h6>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-facebook fs-5"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-twitter fs-5"></i></a>
+                    <a href="#" class="text-white mx-2"><i class="bi bi-linkedin fs-5"></i></a>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <p class="mb-0 small text-muted">&copy; 2025 HealthSync. All rights reserved.</p>
+        </div>
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

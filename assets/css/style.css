@@ -49,35 +49,35 @@
 
 
 :root{
-  --primary: #009688;
-  --primary-dark: #00796b;
-  /* IMPROVED: Changed from pale #e0f2f1 to pure white for better legibility on the dark background */
-  --light: #ffffff; 
-  --panel-bg-start: #ffffff;
-  --panel-bg-end: #fbfdff;
-  --radius-lg: 14px;
-  --soft-shadow: 0 20px 60px rgba(0,0,0,0.12);
-  --accent-gradient: linear-gradient(90deg,var(--primary), #08a0ff);
-  --font-sans: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    --primary: #009688;
+    --primary-dark: #00796b;
+    /* IMPROVED: Changed from pale #e0f2f1 to pure white for better legibility on the dark background */
+    --light: #ffffff; 
+    --panel-bg-start: #ffffff;
+    --panel-bg-end: #fbfdff;
+    --radius-lg: 14px;
+    --soft-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    --accent-gradient: linear-gradient(90deg,var(--primary), #08a0ff);
+    --font-sans: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
 * { box-sizing: border-box; }
 html,body { height:100%; }
 body {
-  margin: 0;
-  font-family: var(--font-sans);
-  background: radial-gradient(circle at 8% 20%, rgba(0,150,136,0.08), transparent 8%),
-              linear-gradient(180deg, #0f4c4a 0%, #175a58 100%);
-  background-color: #072b2a;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  color: var(--light); 
+    margin: 0;
+    font-family: var(--font-sans);
+    background: radial-gradient(circle at 8% 20%, rgba(0,150,136,0.08), transparent 8%),
+                linear-gradient(180deg, #0f4c4a 0%, #175a58 100%);
+    background-color: #072b2a;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    color: var(--light); 
 }
 
 #header{
-  position: sticky;
-  top: 0;
-  z-index: 2000;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
 }
 
 a { text-decoration:none; color:inherit; }
@@ -126,22 +126,22 @@ section:nth-of-type(2) {
 */
 
 .btn {
-  /* Common styles */
-  background: var(--primary);
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.75rem;
-  border-radius: var(--radius-lg);
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border: 2px solid var(--primary); 
-  display: inline-block !important; /* Override original CSS for proper flex layout */
-  width: auto;
-  text-align: center;
+    /* Common styles */
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--radius-lg);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 2px solid var(--primary); 
+    display: inline-block !important; /* Override original CSS for proper flex layout */
+    width: auto;
+    text-align: center;
 }
 
 /* Primary CTA (The "Contact Us" style) - Solid filled */
@@ -274,11 +274,7 @@ section:nth-of-type(2) {
 /* ... rest of your card button/hover styles ... */
 
 
-/*/*
-|----------------------------------------------------------
-| Why Choose HealthSync List Styling
-|----------------------------------------------------------
-*/
+
 
 /* Target the list items inside the card in the "Why Choose" section */
 .col-lg-6 .card ul li {
@@ -288,56 +284,9 @@ section:nth-of-type(2) {
     font-weight: 400;
     margin-bottom: 0.75rem;
 }
-
-/* Target the BOLD keywords within the list items */
 .col-lg-6 .card ul li strong {
     /* This makes the key phrase highly visible and branded */
     color: var(--primary-dark); 
-    font-weight: 700;
-}@media (max-width: 768px) {
-    /* ... existing media query rules ... */
-
-    /* FIX 1: Reduce heavy padding on the column itself */
-    .col-lg-6.d-flex.flex-column {
-        /* Reduce the massive Bootstrap p-5 (3rem) padding to a manageable size */
-        padding: 1.5rem !important; 
-    }
-    
-    /* FIX 2: Ensure the inner card and its padding are scaled down */
-    .col-lg-6 .card.p-4 {
-        /* Reduce the card's inner p-4 (1.5rem) padding */
-        padding: 1rem !important;
-        /* Ensure the card always fits the column width */
-        width: 100% !important; 
-    }
-    
-    /* FIX 3: Ensure list items don't stretch too wide */
-    .col-lg-6 .card ul {
-        padding-left: 1rem !important;
-    }
-    
-    /* FIX 4: Image scaling (critical for the image column on mobile) */
-    .col-lg-6 img {
-        height: auto !important;
-        max-width: 100% !important;
-        /* Remove any potential fixed height that might cause overflow */
-    }
+    font-weight: 700;}
 
     
-}/* Apply Roboto globally to the entire page for a cleaner, modern look */
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Optional: Define colors as suggested in the previous review to make management easier */
-:root {
-    --primary-color: #009688;     /* Teal/Mint Green */
-    --primary-dark: #004d40;      /* Darker Teal */
-    --secondary-orange: #ff9800;  /* Orange for Alerts */
-}
-
-/* Example of applying a custom font to headings (optional) 
-h1, h2, h3 {
-    font-weight: 700; 
-}
-*/
