@@ -1,0 +1,292 @@
+/*
+|----------------------------------------------------------
+| Header & Navigation Styling
+|----------------------------------------------------------
+*/
+
+#header {
+    /* Set a solid dark background for the header when scrolling */
+    background-color: #072b2a; 
+    /* Add a subtle shadow to lift it off the page content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    padding: 0.5rem 0; /* Add slight vertical padding */
+}
+
+/* Style the brand/logo text */
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--light) !important; /* Ensure the brand name is white */
+}
+
+/* Style the navigation links */
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--light) !important; /* Default link color is white */
+    margin: 0 10px; /* Space between links */
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+/* Hover/Active states for links */
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary) !important; /* Highlight with your brand color */
+    background-color: rgba(0, 150, 136, 0.1); /* Subtle teal background on hover */
+}
+
+/* Style for the hamburger menu icon (for mobile) */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.2) !important; /* Light border */
+}
+
+/* Style for the hamburger menu lines */
+.navbar-toggler-icon {
+    /* Use a background image that renders the lines in white */
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+
+:root{
+    --primary: #009688;
+    --primary-dark: #00796b;
+    /* IMPROVED: Changed from pale #e0f2f1 to pure white for better legibility on the dark background */
+    --light: #ffffff; 
+    --panel-bg-start: #ffffff;
+    --panel-bg-end: #fbfdff;
+    --radius-lg: 14px;
+    --soft-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    --accent-gradient: linear-gradient(90deg,var(--primary), #08a0ff);
+    --font-sans: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+* { box-sizing: border-box; }
+html,body { height:100%; }
+body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background: radial-gradient(circle at 8% 20%, rgba(0,150,136,0.08), transparent 8%),
+                linear-gradient(180deg, #0f4c4a 0%, #175a58 100%);
+    background-color: #072b2a;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    color: var(--light); 
+}
+
+#header{
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+}
+
+a { text-decoration:none; color:inherit; }
+a:hover { text-decoration:underline; }
+
+/*
+|----------------------------------------------------------
+| Landing Page Structure and Typography
+|----------------------------------------------------------
+*/
+
+/* Ensures headings in the main sections are the light color */
+h1, h2, h3, h4, h5, h6, .display-4, .lead {
+    color: var(--light);
+}
+
+/* Base style for all sections to maintain padding and text color */
+section {
+    padding: 6rem 0;
+    color: var(--light);
+}
+
+/* Apply a slightly different dark background to alternate sections for subtle visual breaks */
+section:nth-of-type(2) {
+    background-color: rgba(7, 43, 42, 0.7);
+}
+
+/* Set minimum height for content columns to align well with adjacent images */
+.col-lg-6.col-md-6.col-sm-12.d-flex {
+    min-height: 450px;
+}
+
+/* Ensure list text in main sections is light */
+.col-lg-6 ul li {
+    color: inherit;
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+
+/*
+|----------------------------------------------------------
+| Button (CTA) Styling
+|----------------------------------------------------------
+*/
+
+.btn {
+    /* Common styles */
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--radius-lg);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 2px solid var(--primary); 
+    display: inline-block !important; /* Override original CSS for proper flex layout */
+    width: auto;
+    text-align: center;
+}
+
+/* Primary CTA (The "Contact Us" style) - Solid filled */
+.col-lg-6 .btn:nth-child(2) {
+    background-color: var(--primary);
+    color: #fff;
+    margin-right: 1rem;
+}
+
+.col-lg-6 .btn:nth-child(2):hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 150, 136, 0.4);
+}
+
+/* Secondary CTA (The "Read More" style) - Outline style */
+.col-lg-6 .btn:nth-child(4) {
+    background-color: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.col-lg-6 .btn:nth-child(4):hover {
+    background-color: var(--primary);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+
+/*
+|----------------------------------------------------------
+| Card Styling (Features & Testimonials)
+|----------------------------------------------------------
+*/
+
+.card {
+    border: none;
+    background: linear-gradient(135deg, var(--panel-bg-start), var(--panel-bg-end));
+    border-radius: var(--radius-lg);
+    box-shadow: var(--soft-shadow);
+    transition: transform 0.3s ease;
+    color: #343a40; /* Dark text for readability on the light card background */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* 1. Card Body Flex for Button Alignment */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    padding: 1.5rem; /* Ensure standard padding */
+}
+
+/* 2. Style Icon and Title */
+.card-title {
+    font-weight: 700;
+    color: var(--primary-dark);
+    text-align: center;
+    margin-bottom: 1.5rem; 
+}
+
+.card-title i {
+    color: var(--primary); /* Icon Color */
+    font-size: 1.8rem;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
+/*
+|----------------------------------------------------------
+| Card Styling (Features & Testimonials) - REVISED
+|----------------------------------------------------------
+*/
+
+/* 1. Card Body Flex for Button Alignment (Original fix is good) */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    padding: 1.5rem; 
+}
+
+/* 2. Style Icon and Title (No change needed here) */
+.card-title {
+    font-weight: 700;
+    color: var(--primary-dark);
+    text-align: center;
+    margin-bottom: 1.5rem; 
+}
+
+/* 3. Wrap Card Text for Proper Alignment (THE NEW FIX) */
+.card-text-container {
+    /* Use 'flex-grow: 1' to make the text container fill all available space */
+    flex-grow: 1;
+    /* This ensures the text itself flows naturally without stretching */
+    margin-bottom: 1.5rem; /* Space before the button */
+    text-align: left;
+}
+
+.card-text {
+    /* Use this class for all text paragraphs inside the container */
+    color: #495057;
+    margin-bottom: 0.5rem; /* Space between paragraphs */
+}
+
+.card-body ul {
+    list-style-type: disc;
+    color: #495057; 
+    padding-left: 1.25rem;
+}
+
+.card-body ul li {
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+
+/* 4. Push Button to the Bottom (Original fix is good) */
+.card-body .btn {
+    /* Since the container above is growing, this button stays at the bottom */
+    margin-top: auto; 
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* ... rest of your card button/hover styles ... */
+
+
+
+
+/* Target the list items inside the card in the "Why Choose" section */
+.col-lg-6 .card ul li {
+    /* Use the primary color for the list items */
+    color: #495057; /* Standard dark text color, as set earlier */
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+}
+.col-lg-6 .card ul li strong {
+    /* This makes the key phrase highly visible and branded */
+    color: var(--primary-dark); 
+    font-weight: 700;}
+
+    
